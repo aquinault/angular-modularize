@@ -27,8 +27,11 @@ app
 
 In each of these sub-modules:
 
+```javascript
 angular.module('myApp.myModule');
+```
 
+In the App module:
 
 angular.module('myApp', [
    'myApp.nonsense', 
