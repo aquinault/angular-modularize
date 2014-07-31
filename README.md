@@ -5,15 +5,25 @@ How to modularize an angularJS app for an enterprise whith sub-module
 
 
 app
+
 |____nonsense
+
 | |____nonsense.module.js
+
 | |____foo.ctrl.js
+
 | |____bar.ctrl.js
+
 | |____baz.filter.js
+
 |____apparel
+
 | |____apparel.module.js
+
 | |____hat.filter.js
+
 | |____pants.service.js
+
 |____sounds
 | |____sounds.module.js
 | |____arf.service.js
