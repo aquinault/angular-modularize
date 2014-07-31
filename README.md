@@ -5,11 +5,8 @@ How to modularize an angularJS app for an enterprise whith sub-module
 
 
 app
-
 |____nonsense
-
 | |____nonsense.module.js
-
 | |____foo.ctrl.js
 | |____bar.ctrl.js
 | |____baz.filter.js
@@ -27,6 +24,7 @@ app
 | |____bob.directive.js
 | |____pat.html
 |____myapp.module.js
+
 
 In each of these sub-modules:
 
