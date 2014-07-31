@@ -11,18 +11,18 @@ app
 |____|____bar.ctrl.js  
 |____|____baz.filter.js  
 |____apparel  
-| |____apparel.module.js  
-| |____hat.filter.js  
-| |____pants.service.js  
+|____|____apparel.module.js  
+|____|____hat.filter.js  
+|____|____pants.service.js  
 |____sounds  
-| |____sounds.module.js  
-| |____arf.service.js  
-| |____oink.html  
-| |____moo.directive.js  
+|____|____sounds.module.js  
+|____|____arf.service.js  
+|____|____oink.html  
+|____|____moo.directive.js  
 |____people  
-| |____people.module.js  
-| |____bob.directive.js  
-| |____pat.html  
+|____|____people.module.js  
+|____|____bob.directive.js  
+|____|____pat.html  
 |____myapp.module.js  
 
 In each of these sub-modules:
