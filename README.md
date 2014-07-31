@@ -1,7 +1,7 @@
 angular-modularize
 ==================
 
-How to modularize an angularJS app for an enterprise whith sub-module
+How to modularize an [Angular.js] app for an enterprise whith sub-module
 
 
 app  
@@ -33,8 +33,10 @@ angular.module('myApp.myModule');
 
 In the App module:
 
+```javascript
 angular.module('myApp', [
    'myApp.nonsense', 
    'myApp.apparel', 
    'myApp.sounds', 
    'myApp.people']);
+```
