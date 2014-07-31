@@ -1,9 +1,9 @@
 angular-modularize
 ==================
 
-How to modularize an [Angular.js] app for an enterprise whith sub-module
+How to modularize an [Angular.js](http://angularjs.org/) app for an enterprise whith sub-module
 
-
+```sh
 app  
 |____nonsense  
 |____|____nonsense.module.js  
@@ -24,6 +24,7 @@ app
 |____|____bob.directive.js  
 |____|____pat.html  
 |____myapp.module.js  
+```
 
 In each of these sub-modules:
 
