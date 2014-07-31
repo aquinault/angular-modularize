@@ -4,13 +4,13 @@ angular-modularize
 How to modularize an angularJS app for an enterprise whith sub-module
 
 
-app
-    nonsense
-        nonsense.module.js
-        foo.ctrl.js
-        bar.ctrl.js
-        baz.filter.js
-    apparel
+app  
+    nonsense  
+        nonsense.module.js  
+        foo.ctrl.js  
+        bar.ctrl.js  
+        baz.filter.js  
+    apparel  
         apparel.module.js
         hat.filter.js
         pants.service.js
