@@ -7,4 +7,6 @@ pids
 *.pid
 *.seed
 
+node_modules
+bower_components
 .c9
