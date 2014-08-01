@@ -23,15 +23,23 @@
         <script src="bower_components/angular/angular.min.js"></script>
         <script src="bower_components/angular-resource/angular-resource.min.js"></script>
         <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="bower_components/underscore/underscore.js"></script>
+
+
         <script src="components/app.module.js"></script>
+        <script src="components/underscore/underscore.module.js"></script>
+        <script src="components/header/header.module.js"></script>
+        <script src="components/dashboard/dashboard.module.js"></script>
+        <script src="components/cover/cover.module.js"></script>
     </head>
     
     <body ng-app="app.module">
     
-
         <div ng-include src="'components/header/header.html'"></div>
     
-        
+		<div ng-view></div>	
+
+
         <!-- Bootstrap core JavaScript==================================================-
         ->
     <!-- Placed at the end of the document so the pages load faster -->
