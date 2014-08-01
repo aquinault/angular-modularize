@@ -17,6 +17,13 @@ appModule.run(function($rootScope) {
 appModule.config(['$routeProvider', function($routeProvider) {
     console.log('config');
     
+/*    
+    $routeProvider.when('/cover', {
+        templateUrl: '/components/cover/cover.html',
+        controller: 'cover.controller'
+    });
+*/
+
     /*    $routeProvider.when('/', {
         redirectTo: '/cover'
     }).otherwise({

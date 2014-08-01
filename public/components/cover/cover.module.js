@@ -7,11 +7,18 @@ coverModule.run(function($rootScope, _) {
 
 coverModule.config(['$routeProvider', function($routeProvider) {
     console.log('config');
+/*
+    $routeProvider.when('/cover', {
+        templateUrl: 'cover.html',
+        controller: 'cover.controller'
+    });
+*/
 
     $routeProvider.when('/cover', {
         templateUrl: '/components/cover/cover.html',
         controller: 'cover.controller'
     });
+
 
 }]);
 
