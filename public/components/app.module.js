@@ -1,33 +1,15 @@
 // Create a new module
-var appModule = angular.module('app.module', ['ngRoute', 'underscore.module', 'header.module', 'dashboard.module']);
+var appModule = angular.module('app.module', ['ngRoute', 'ui.router', 'underscore.module', 'header.module', 'dashboard.module', 'cover.module']);
 
 appModule.run(function($rootScope) {
-    console.log('run');
-
-    msg = {
-        name: 'Home',
-        url: 'cover',
-        index: 0
-    };
-
-    $rootScope.$broadcast('AddItemHeader', msg);
-
+    console.log('appModule run');
 });
 
-appModule.config(['$routeProvider', function($routeProvider) {
-    console.log('config');
-    
-/*    
-    $routeProvider.when('/cover', {
-        templateUrl: '/components/cover/cover.html',
-        controller: 'cover.controller'
-    });
-*/
+appModule.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+    console.log('appModule config');
 
-    /*    $routeProvider.when('/', {
-        redirectTo: '/cover'
-    }).otherwise({
-        redirectTo: '/'
-    });
-    */
+    //
+    // For any unmatched url, redirect to /state1
+    $urlRouterProvider.otherwise("/cover");
+  
 }]);
