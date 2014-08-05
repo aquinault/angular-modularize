@@ -1,5 +1,5 @@
 // Create a new module
-var appModule = angular.module('app.module', ['ngRoute', 'ui.router', 'underscore.module', 'header.module', 'dashboard.module', 'cover.module']);
+var appModule = angular.module('app.module', ['ui.router', 'underscore.module', 'header.module', 'dashboard.module', 'cover.module', 'menu.module']);
 
 appModule.run(function($rootScope) {
     console.log('appModule run');

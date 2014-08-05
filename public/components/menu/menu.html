@@ -1,0 +1,16 @@
+<fa-app style="height: 568px; width: 320px; margin: 0;">
+  <fa-view fa-pipe-from="evt" fa-click="flip()">
+    <!--fa-surface fa-background-color="'#FF0000'" fa-pipe-to="evt">Front</fa-surface>
+      <fa-surface fa-background-color="'#0000FF'" fa-pipe-to="evt">Back</fa-surface-->
+    <fa-modifier fa-origin="[.5,.5]" fa-size="[100, 100]" fa-rotate=".3">
+      <fa-flipper id="flipper">
+        <fa-surface fa-size="[undefined, undefined]" fa-pipe-to="evt">
+          <div ng-include src=" 'components/menu/b.html' "></div>
+        </fa-surface>
+        <fa-surface fa-size="[undefined, undefined]" fa-pipe-to="evt">
+          <div ng-include src=" 'components/menu/a.html' "></div>
+        </fa-surface>
+      </fa-flipper>
+    </fa-modifier>
+  </fa-view>
+</fa-app>
