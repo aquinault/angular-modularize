@@ -53,12 +53,14 @@ menuModule.controller('menuModule.controller', ['$rootScope', '$scope', '$famous
     var eventHandlerA = new EventHandler();
 
 
-    var boxA = new Box('A', [0, 0, 0], new Transitionable([0, 0, 0]), new Transitionable(0.3), new Transitionable([100, 100]), eventHandlerA, false);
-    var boxB = new Box('B', [110, 0, 0], new Transitionable([110, 0, 0]), new Transitionable(0.3), new Transitionable([100, 100]), eventHandlerA, false);
+    var boxA = new Box('A', [0, 0, 0], new Transitionable([0, 0, 0]), new Transitionable(0.3), new Transitionable([80, 80]), eventHandlerA, false);
+    var boxB = new Box('B', [100, 0, 0], new Transitionable([100, 0, 0]), new Transitionable(0.3), new Transitionable([80, 80]), eventHandlerA, false);
+    var boxC = new Box('C', [200, 0, 0], new Transitionable([200, 0, 0]), new Transitionable(0.3), new Transitionable([80, 80]), eventHandlerA, false);
 
     $scope.boxes = [];
     $scope.boxes.push(boxA);
     $scope.boxes.push(boxB);
+    $scope.boxes.push(boxC);
     
     $scope.selectedIndex = 0;
 
@@ -69,7 +71,7 @@ menuModule.controller('menuModule.controller', ['$rootScope', '$scope', '$famous
 
         var box1 = _.findWhere($scope.boxes, {name: data});
 
-        console.log('index : ' + _.indexOf($scope.boxes, box1) )
+        //console.log('index : ' + _.indexOf($scope.boxes, box1) )
         $scope.selectedIndex =  _.indexOf($scope.boxes, box1);
 
 
@@ -124,7 +126,7 @@ menuModule.controller('menuModule.controller', ['$rootScope', '$scope', '$famous
             curve: 'easeInOut'
         });
 
-        _box.size.set([100, 100, ], {
+        _box.size.set([80, 80, ], {
             duration: 500,
             curve: 'easeInOut'
         });
