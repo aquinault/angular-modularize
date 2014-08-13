@@ -74,6 +74,8 @@ module.exports = function(grunt) {
 				configFile : 'karma.conf.js'
 			}
 		}
+		
+		
 	});
 
 	// Load the plugins 
@@ -87,6 +89,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-bower-task');
 	grunt.loadNpmTasks('grunt-karma');
+
 
 	// Load task css 
 	grunt.registerTask('css', [ 'less' ]);

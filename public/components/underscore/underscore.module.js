@@ -1,7 +1,6 @@
 (function() {
 
-	var underscoreModule = angular.module('underscore.module', []);
-	underscoreModule.factory('_', function() {
+	angular.module('underscore.module', []).factory('_', function() {
 
 		window._.mixin({
 			compactObject: function(o) {
