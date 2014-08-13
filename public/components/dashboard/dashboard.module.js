@@ -1,5 +1,12 @@
-(function () {
+//(function () {
+  
+'use strict';
 
+define([
+	'angular'
+	], function (angular) {
+
+    
     // Create a new module
     angular.module('dashboard.module', []);
     
@@ -22,14 +29,34 @@
         // Now set up the states
         $stateProvider.state('dashboard', {
             url: "/dashboard",
-            controller: 'dashboard.controller',
-            templateUrl: "components/dashboard/dashboard.html"
+//            controller: 'dashboard.controller',
+            templateUrl: "components/dashboard/dashboard.html",
+            
+            resolve : {
+                simpleObj:  function($q){
+                    console.log('dashboard.controller resolve');
+                    
+                    var deferred = $q.defer();
+                    require(['components/dashboard/dashboard.controller'], function(module) {
+                        deferred.resolve();
+                    });
+                    
+                    // et retourne un promise à Angular
+                    return deferred.promise;
+                 }
+            }
+            
         });
+        
+
+
     }]);
     
-    
+    /*
     angular.module('dashboard.module').controller('dashboard.controller', ['$rootScope', '$scope', function($rootScope, $scope) {
     	console.log('dashboardModule controller');
     }]);
-
-})();
+    */
+})  
+    
+//})();

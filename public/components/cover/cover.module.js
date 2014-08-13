@@ -1,4 +1,11 @@
-(function () {
+//(function () {
+  
+'use strict';
+
+define([
+	'angular'
+	], function (angular) {
+
 
     // Create a new module
     angular.module('cover.module', []);
@@ -23,14 +30,25 @@
         // Now set up the states
         $stateProvider.state('cover', {
             url: "/cover",
-            controller: 'cover.controller',
-            templateUrl: "components/cover/cover.html"
+//            controller: 'cover.controller',
+            templateUrl: "components/cover/cover.html",
+            resolve : {
+                simpleObj:  function($q){
+                    console.log('cover.controller resolve');
+                    
+                    var deferred = $q.defer();
+                    require(['components/cover/cover.controller'], function(module) {
+                        deferred.resolve();
+                    });
+                    
+                    // et retourne un promise à Angular
+                    return deferred.promise;
+                 }
+            }
+            
         });
     }]);
     
-    angular.module('cover.module').controller('cover.controller', ['$rootScope', '$scope', function($rootScope, $scope) {
-        console.log('coverModule controller');
-    
-    }]);
 
-})();
+
+})  
