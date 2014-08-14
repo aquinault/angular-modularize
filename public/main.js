@@ -47,6 +47,8 @@ require( [
 	'css!style/navbar-fixed-top'
 ], function(angular, jquery, bootstrap, app, _, css) {
 
+	console.log('app : ' + app);
+
 	var $html = angular.element(document.getElementsByTagName('html')[0]);
 
 	angular.element().ready(function() {
